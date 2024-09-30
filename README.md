@@ -10,4 +10,5 @@ Skyward tech challenge for AI engineer position
 - [FEEDBACK](./FEEDBACK.md): Upstream feedback
 - [STACK](./STACK.md): Technology stack/picks 
 - [ARCH](./ARCH.md): Architecture definition
+- [INSTRUCTIONS](./INSTRUCTIONS.md): Original README.md
 - [LICENSE](./LICENSE): Project license 
