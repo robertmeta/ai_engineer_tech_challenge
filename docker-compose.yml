@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  techscreen:
+    container_name: techscreen
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "54321:54321"
+    volumes:
+      - app-data:/app:ro
+      - log-data:/app/log:rw
+    env_file:
+      - .env
+    networks:
+      - vnet
+
+networks:
+  vnet:
+    driver: bridge
+
+volumes:
+  app-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}
+  log-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/log

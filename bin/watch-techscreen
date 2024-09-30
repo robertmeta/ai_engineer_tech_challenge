@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Function to run our main application
+run_app() {
+    echo "Starting the main application..."
+    gunicorn techscreen.main:app \
+        --timeout $TECHSCREEN_WORKERS_TIMEOUT \
+        --log-level=$TECHSCREEN_LOGLEVEL \
+        -w $TECHSCREEN_WORKERS \
+        -b $TECHSCREEN_HOST:$TECHSCREEN_PORT
+}
+
+# Function to stop the main application
+stop_app() {
+    echo "Stopping the main application..."
+    pkill gunicorn
+}
+
+# Initial run
+run_app
+
+# Watch for changes, excluding the log directory and *_data directories
+while true; do
+    if inotifywait -e modify,create,delete,move -r --exclude '/app/log(/.*|$)|/app/.*_data(/.*|$)' /app; then
+        echo "Changes detected, restarting..."
+        stop_app
+        run_app
+    fi
+done
