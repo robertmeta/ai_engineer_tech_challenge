@@ -1,5 +1,5 @@
 Scalability
-===============
+===========
 
 We can assess scalability across two main factors for this simple version:
 

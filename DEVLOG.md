@@ -3,6 +3,13 @@ Devlog
 This is a log of developers thoughts, newest at the top.
 
 
+2024-09-30 12:28:32 - Robert Melton
+-----------------------------------
+Tested some models out, cohere small, gemma2 small and llama 3.2 tiny (1B, 3B)
+and I think the 3B is ideal for this use case due to speed of it and the small 
+size. Optional accelleration with GPU means easy local dev on all platforms and 
+optoimized production deploys. 
+
 2024-09-30 10:08:21 - Robert Melton
 -----------------------------------
 Looked at the existing solutions that are in public

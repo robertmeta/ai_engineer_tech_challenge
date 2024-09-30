@@ -25,6 +25,9 @@ Our technology stack comprises the following components:
 
 **Future Considerations**:
 
+- **Caching**: Would need to use a caching system for the fetched pages to build
+  up our own index of files. KeyDB instead of Redis due to recent licensing
+  changes.
 - **Docker Compose**: Planning to adopt Docker Compose for managing more complex
   configurations in future developments, allowing for easier multi-container
   setups.
