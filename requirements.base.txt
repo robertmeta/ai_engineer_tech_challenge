@@ -1,3 +1,5 @@
+BeautifulSoup
+aiohttp
 autoflake
 autoimport
 bottle
