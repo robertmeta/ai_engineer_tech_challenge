@@ -40,4 +40,3 @@ Files
 --
 - [bin/](./bin/): Scripts and +x utilities 
 - [log/](./log/): Logs land here
-- [techscreen/](./techscreen/): Project python core 
