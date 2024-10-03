@@ -3,6 +3,14 @@ Devlog
 This is a log of developers thoughts, newest at the top.
 
 
+2024-10-03 01:56:41 - Robert Melton
+-----------------------------------
+Why do we use requirements.base.txt instead of requirements.txt -- we actually
+can use both, but requirements.base.txt is sort of an unversioned base that we
+can update by hand with exactly what we need, and requirements.txt is the frozen
+output of pip for an exact same deploy.
+
+
 2024-10-03 01:01:26 - Robert Melton
 -----------------------------------
 Using bing as the backend for search because it is not current constrained and
