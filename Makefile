@@ -124,7 +124,7 @@ tf-plan:
 	$(TECHSCREEN_CMD) sh -c 'terraform init'
 	$(TECHSCREEN_CMD) sh -c 'terraform plan'
 
-.PHONY:
-tf-plan:
+.PHONY: tf-apply
+tf-apply:
 	$(TECHSCREEN_CMD) sh -c 'terraform init'
 	$(TECHSCREEN_CMD) sh -c 'terraform apply'

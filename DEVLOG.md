@@ -2,6 +2,12 @@ Devlog
 ======
 This is a log of developers thoughts, newest at the top.
 
+2024-10-03 02:48:27 - Robert Melton
+-----------------------------------
+Switching to duckduckgo from bing due to no key required, just found that out
+when doing some research.
+
+
 
 2024-10-03 01:56:41 - Robert Melton
 -----------------------------------

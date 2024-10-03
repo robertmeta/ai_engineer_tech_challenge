@@ -1,20 +1,40 @@
 #!/bin/sh
 
+# Variable to store the PID of the application
+APP_PID=""
+
 # Function to run our main application
 run_app() {
     echo "Starting the main application..."
-    gunicorn techscreen.main:app \
+    gunicorn main:app \
         --timeout $TECHSCREEN_WORKERS_TIMEOUT \
         --log-level=$TECHSCREEN_LOGLEVEL \
         -w $TECHSCREEN_WORKERS \
-        -b $TECHSCREEN_HOST:$TECHSCREEN_PORT
+        -b $TECHSCREEN_HOST:$TECHSCREEN_PORT &
+    APP_PID=$!
+    echo "Application started with PID: $APP_PID"
 }
 
 # Function to stop the main application
 stop_app() {
-    echo "Stopping the main application..."
-    pkill gunicorn
+    if [ -n "$APP_PID" ]; then
+        echo "Stopping the application with PID: $APP_PID"
+        kill $APP_PID
+        wait $APP_PID 2>/dev/null
+        echo "Application stopped"
+    else
+        echo "No running application found"
+    fi
 }
+
+# Function to restart the application
+restart_app() {
+    stop_app
+    run_app
+}
+
+# Trap SIGINT and SIGTERM signals and exit
+trap "stop_app; exit 0" SIGINT SIGTERM
 
 # Initial run
 run_app
@@ -23,7 +43,6 @@ run_app
 while true; do
     if inotifywait -e modify,create,delete,move -r --exclude '/app/log(/.*|$)|/app/.*_data(/.*|$)' /app; then
         echo "Changes detected, restarting..."
-        stop_app
-        run_app
+        restart_app
     fi
 done

@@ -10,7 +10,7 @@ def get_config():
 
     config = {
         "CONFIG_DIR": config_dir,
-        **dotenv_values(os.path.join(mono_dir, ".env")),
+        **dotenv_values(os.path.join(config_dir, ".env")),
         # load shared development variables
         # **dotenv_values(
         #     os.path.join(src_dir, "..", ".env.secret")

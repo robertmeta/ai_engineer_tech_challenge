@@ -5,13 +5,16 @@ beautifulsoup4
 bottle
 bottle-session
 djlint
+duckduckgo_search
 gunicorn
+html2text
 jinja2
 loguru
 lxml
 lz4
 marko
 mypy
+ollama
 openpyxl
 py-d2
 pydantic

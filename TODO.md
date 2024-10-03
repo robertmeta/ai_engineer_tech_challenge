@@ -17,3 +17,4 @@ Imrpovements
 - [ ] Put dockerhub repo in config (.env)
 - [ ] Setup caddy ssl using intenral flag (for dev)
 - [ ] Build a pretty UI (I am not a UI person)
+- [ ] Use GUID trick to avoid prompt injection
