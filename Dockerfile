@@ -18,6 +18,7 @@ RUN apt update && apt install -y \
     libyaml-dev \
     python3-dev \
     ripgrep \
+    teraform \
  && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.base.txt /tmp

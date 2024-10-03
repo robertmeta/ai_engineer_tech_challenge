@@ -8,9 +8,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-      - "54321:54321"
+      - "80:80"
+      - "443:443"
     volumes:
-      - app-data:/app:ro
+      - app-data:/app:rw
       - log-data:/app/log:rw
     env_file:
       - .env
