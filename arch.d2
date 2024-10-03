@@ -1,0 +1,24 @@
+vars: {
+    d2-config: {
+        layout-engine: elk
+        theme-id: 200
+    }
+}
+
+Docker {
+    User -> Caddy: 1. Request
+    Caddy -> PythonWebApp: 2. https reverse proxy
+    PythonWebApp -> RAGServer: 3. get context
+    RAGServer -> Fetcher: 4. get cache/fresh content
+    RAGServer.style.fill: red
+    Fetcher <- Cache: 5. Check
+    Fetcher <-> BingAPI: 6. Get URLs
+    Fetcher <-> URLs: 7. GET Content
+    Fetcher <-> Extractor: 8. Strip Unneeded
+    Fetcher -> Cache: 9. Write
+    Cache.style.fill: red
+    PythonWebApp <-> RAGServer: 10. Query for context
+    PythonWebApp <-> AIEngine: 11. Send Context and Prompt
+    PythonWebApp -> Caddy: 12. SendResponse
+    Caddy -> User: 13. SendResponse
+}
