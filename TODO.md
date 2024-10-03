@@ -10,7 +10,7 @@ Todo
 - [x] Build Stack (in docker)
 - [x] Build Watcher (in docker)
 - [x] Build Deploy (in docker)
-- [ ] Make video
+- [x] Make video
 
 Imrpovements
 ------------

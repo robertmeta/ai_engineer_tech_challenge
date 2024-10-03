@@ -2,6 +2,8 @@ Readme
 ======
 Skyward tech challenge for AI engineer position
 
+- Video: https://youtu.be/v0iOzn5uRus
+
 TL;DR
 -----
 I put a lot of artifacts in this project to emulate how I would run an actual team in terms of tracking progress, I very strongly believe in keeping stuff in git and close to the developers fingertips. I am for radical transparency and tracking things like points of friction in a friction log. Accomplishments in BRAGS.md, etc. 
