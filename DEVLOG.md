@@ -3,6 +3,12 @@ Devlog
 This is a log of developers thoughts, newest at the top.
 
 
+2024-10-03 01:01:26 - Robert Melton
+-----------------------------------
+Using bing as the backend for search because it is not current constrained and
+the setup is better the Google GCE, full web search off one API key.
+
+
 2024-10-03 00:55:44 - Robert Melton
 -----------------------------------
 Just got back to working on this, finishing up design and going to use teraform,
