@@ -113,7 +113,18 @@ diagrams:
 techscreen-shell:
 	$(TECHSCREEN_CMD) /bin/bash
 
-.PHONE: push-dockerhub
+.PHONY: push-dockerhub
 push-dockerhub:
 	docker tag ai_engineer_tech_challenge-techscreen:latest robertmeta/techscreen
 	docker push robertmeta/techscreen:latest
+
+
+.PHONY: tf-plan
+tf-plan:
+	$(TECHSCREEN_CMD) sh -c 'terraform init'
+	$(TECHSCREEN_CMD) sh -c 'terraform plan'
+
+.PHONY:
+tf-plan:
+	$(TECHSCREEN_CMD) sh -c 'terraform init'
+	$(TECHSCREEN_CMD) sh -c 'terraform apply'

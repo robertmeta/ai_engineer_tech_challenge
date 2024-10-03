@@ -9,6 +9,7 @@ in the Makefile are routed through the configured docker.
 
 Required
 --------
+- .env: get file from a coworker or boss, share yours with make share-env
 - Docker
 - Docker-compose
 - Make (lots of versions availabe for Windows, comes on Mac and Linux

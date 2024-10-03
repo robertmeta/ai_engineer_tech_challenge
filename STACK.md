@@ -3,7 +3,7 @@ Stack
 
 Our technology stack comprises the following components:
 
-- Teraform: for robust deployments
+- Terraform: for robust deployments
 - Dockerhub: for moving images to linode 
 - Make: A reliable build automation tool that, despite its age, remains
   functional and effective for our needs.
