@@ -2,6 +2,8 @@ Readme
 ======
 Skyward tech challenge for AI engineer position
 
+Files
+-----
 - [README](./README.md): You are here
 - [GOALS](./GOALS.md): Project Goals
 - [TODO](./TODO.md): Project TODO

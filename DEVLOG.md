@@ -3,12 +3,32 @@ Devlog
 This is a log of developers thoughts, newest at the top.
 
 
+2024-10-03 00:55:44 - Robert Melton
+-----------------------------------
+Just got back to working on this, finishing up design and going to use teraform,
+linode and a single cookie cutter docker as it likely will scale on a single
+point, the LLM performance.
+
+
+2024-09-30 16:26:34 - Robert Melton
+-----------------------------------
+Sadly, Ollama on Apple M1 series when in the docker runs painfully slow.
+
+https://chariotsolutions.com/blog/post/apple-silicon-gpus-docker-and-ollama-pick-two/
+
+We can handle this by optionally linking up to the host using the
+host.docker.intenral to reference the host and to pass in the ollama host and
+port via .env making the docker still work out of the box but also work with the
+accellerated version if developer wants.
+
+
 2024-09-30 12:28:32 - Robert Melton
 -----------------------------------
 Tested some models out, cohere small, gemma2 small and llama 3.2 tiny (1B, 3B)
-and I think the 3B is ideal for this use case due to speed of it and the small 
-size. Optional accelleration with GPU means easy local dev on all platforms and 
-optoimized production deploys. 
+and I think the 3B is ideal for this use case due to speed of it and the small
+size. Optional accelleration with GPU means easy local dev on all platforms and
+optoimized production deploys.
+
 
 2024-09-30 10:08:21 - Robert Melton
 -----------------------------------

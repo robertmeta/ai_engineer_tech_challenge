@@ -3,8 +3,8 @@ Stack
 
 Our technology stack comprises the following components:
 
-- Linode CLI: Utilized for creating easy, hand-rolled deployment scripts,
-  simplifying server management and deployment processes.
+- Teraform: for robust deployments
+- Dockerhub: for moving images to linode 
 - Make: A reliable build automation tool that, despite its age, remains
   functional and effective for our needs.
 - Python 3.10+: Chosen for its advanced asynchronous capabilities and new
