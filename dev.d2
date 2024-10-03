@@ -1,0 +1,22 @@
+vars: {
+    d2-config: {
+        layout-engine: elk
+        theme-id: 200
+    }
+}
+
+DeveloperMachine {
+    DockerImage {
+    }
+}
+DockerHub {
+    DockerImage
+}
+Linode {
+   DockerImage
+}
+
+User -> DeveloperMachine.DockerImage: Build
+DeveloperMachine.DockerImage -> DockerHub.DockerImage: Copy
+User -> Linode: Teraform Push
+Linode.DockerImage <- DockerHub.DockerImage: Copy
