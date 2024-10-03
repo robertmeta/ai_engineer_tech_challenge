@@ -1,7 +1,7 @@
-BeautifulSoup
 aiohttp
 autoflake
 autoimport
+beautifulsoup4
 bottle
 bottle-session
 djlint

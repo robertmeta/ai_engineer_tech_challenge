@@ -112,3 +112,8 @@ diagrams:
 .PHONY: techscreen-shell
 techscreen-shell:
 	$(TECHSCREEN_CMD) /bin/bash
+
+.PHONE: push-dockerhub
+push-dockerhub:
+	docker tag ai_engineer_tech_challenge-techscreen:latest robertmeta/techscreen
+	docker push robertmeta/techscreen:latest
